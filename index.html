@@ -1,5 +1,51 @@
 <html>
 
 
+<style>
+    #train {
+        position: relative;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <img id="train" src="https://js.cx/clipart/train.gif">
+</body>
+
+<script>
+
+        let difficultyLevel = ['Easy', 'Medium', 'Hard']
+    
+        /**
+            Below function contain total of 9 state from zero render till hangman finishes
+        
+        */
+        function renderHangman(state) {
+            let stateList = ['0 blank window']
+    
+            return 'return javascript object with return hangman window which contain 9 state'
+        }
+    
+        function checkHangManStatus(character, position) {
+    
+            return 'return total of 9 state ranging from 1 to 9'
+        }
+    
+        train.onclick = function() {
+          let start = Date.now();
+    
+          let timer = setInterval(function() {
+            let timePassed = Date.now() - start;
+    
+            train.style.left = timePassed / 5 + 'px';
+    
+            if (timePassed > 2000) clearInterval(timer);
+    
+          }, 20);
+        }
+    
+    </script>
+    
+
 
 </html>
