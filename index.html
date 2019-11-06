@@ -8,24 +8,17 @@
 </style>
 <!-- TODO: try to load it from a separate json -->
 <!-- <script type="text/javascript" src="wordList.json"></script> -->
-<script type="text/javascript" src="./hangman.js"> </script>
+
 
 <body>
+    <canvas id="myCanvas" width="600" height="500" style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+    </canvas>
     <div id="root"></div>
 </body>
-
+<script type="text/javascript" src="./hangman.js"> </script>
 <script>
     let hangman = new Hangman()
-    let wordToGuess = hangman.pickRandomWord()
-    let wordArray = hangman.generateFillInSpace(wordToGuess.word.trim().length)
-    let alphabetsDomElement = hangman.generateAlphabetsKeyboard()
-
-    let rootElement = document.getElementById("root")
-    let attachWordArrayToRoot = rootElement.appendChild(wordArray)
-    let attachKeyBoardToRoot = rootElement.appendChild(alphabetsDomElement)
-
-    console.log(wordArray)
-
 </script>
 
 

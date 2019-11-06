@@ -122,66 +122,143 @@ var wordList = [
     }
 ]
 
-// import Store from "./store/store";
-
 class Hangman {
 
     constructor() {
-    //     let self = this;
 
-    //     this.render = this.render || function () { };
+        let randomWord = wordList[Math.floor(Math.random() * wordList.length)]
 
-    //     if (props.store instanceof Store) {
-    //         props.store.events.subscribe('stateChange', () => self.render());
-    //     }
-
-    //     if (props.hasOwnProperty('element')) {
-    //         this.element = props.element;
-    //     }
+        this.data = {
+            selectedCharacterIndex: '0_word',
+            selectedWord: randomWord,
+            failCount: 0
+        }
+        this.render()
     }
 
-    // Return random word and sentence
-    pickRandomWord() {
-        let randomNumber = Math.floor(Math.random() * wordList.length)
-        return wordList[randomNumber]
+    render() {
+
+        let rootElement = document.getElementById("root")
+
+        let rootElementChildDiv = this.rootChildDiv(rootElement)
+        let blankBoxes = this.generateBlanks(this.data.selectedWord.word.trim().length)
+        let sentenceElement = this.generateSentenceBlock()
+        let alphabetsKeyboard = this.generateAlphabetsKeyboard()
+        let generateHangman = this.generateHangman()
+
+        rootElement.appendChild(rootElementChildDiv)
+        rootElementChildDiv.appendChild(generateHangman)
+        rootElementChildDiv.appendChild(blankBoxes)
+        rootElementChildDiv.appendChild(sentenceElement)
+        rootElementChildDiv.appendChild(alphabetsKeyboard)
     }
 
-    set selectedIndex(id) {
-        this._selectedWord = id
+    generateHangman() {
+
+        let canvas = document.getElementById("myCanvas")
+        let ctx = canvas.getContext("2d")
+        ctx.fillStyle = "grey";
+        ctx.fillRect(0, 0, 600, 500);
+
+        let frame1 = this.drawLine(ctx, 50, 450, 450, 450);
+        let frame2 = this.drawLine(ctx, 100, 450, 100, 100);
+        let frame3 = this.drawLine(ctx, 100, 100, 250, 100);
+        let frame4 = this.drawLine(ctx, 250, 100, 250, 150);
+        let head = this.drawArc(ctx, 250,170,20, 0, Math.PI*2);
+        let torso = this.drawLine(ctx, 250, 190, 250, 270);
+        let leftArm = this.drawLine(ctx, 250, 190, 280, 220);
+        let rightArm = this.drawLine(ctx, 250, 190, 220, 220);
+        let rightLeg = this.drawLine(ctx, 250, 270, 220, 300);
+        let leftLeg = this.drawLine(ctx, 250, 270, 280, 300);
+
+        return canvas
     }
 
-    get selectedIndex() {
-        return this._selectedWord
+    drawLine(ctx, startX, startY, endX, endY) {
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(endX, endY);
+        ctx.stroke();
     }
 
-    getInputElement = (i) => {
+     drawArc(ctx, centerX, centerY, radius, startAngle, endAngle){
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+        ctx.stroke();
+    }
+
+    generateSentenceBlock() {
+
+        let sentence = document.createElement('p')
+        sentence.innerText = this.data.selectedWord.sentence;
+
+        this.style(sentence, {
+            border: '1px solid grey',
+            display: 'inline-block',
+            width: 'max-content',
+            color: 'white',
+            backgroundColor: 'purple',
+            fontWeight: 'bold',
+            padding: '8px',
+            margin: '16px'
+        })
+
+        return sentence
+    }
+
+    rootChildDiv(rootElement) {
+
+        let rootElementChildDiv = document.createElement('div');
+
+        this.style(rootElementChildDiv, {
+            margin: '32px',
+            display: 'flex',
+            flexDirection: "column",
+            position: 'fixed',
+            bottom: '0'
+        })
+
+        return rootElementChildDiv
+
+    }
+
+    singleBlankBoxes = (i) => {
         let self = this;
-        let input = document.createElement('input')
+        let input = document.createElement('div')
         input.setAttribute("id", `${i}_word`)
+
         this.style(input, {
-            height: '40px', width: '40px'
+            backgroundColor: 'white',
+            border: '1px solid green',
+            padding: '16px',
+            margin: '2px'
         })
 
         input.addEventListener('click', function (element) {
-            debugger
             let selectedElementId = element.srcElement.id
-            self.selectedIndex(element.srcElement.id)
-
+            self.data.selectedCharacterIndex = element.srcElement.id;
             alert(selectedElementId)
         })
 
         return input
     }
 
+    generateBlanks(wordLength) {
 
-
-    generateFillInSpace(wordLength) {
-
-        let inputParentTree = document.createElement('div');
         let self = this
+        let inputParentTree = document.createElement('div');
+        this.style(inputParentTree, {
+            height: '40px',
+            padding: '16px',
+            margin: '2px',
+            flexDirection: 'row',
+            display: 'flex',
+            alignItems: 'center'
+        })
+
         let arrayOfInput = Array.apply(null, new Array(wordLength)).map(
             function (el, i) {
-                return self.getInputElement(i)
+                return self.singleBlankBoxes(i)
             }
         )
 
@@ -192,10 +269,11 @@ class Hangman {
         return inputParentTree
     }
 
+    generateKeyboard = (i) => {
 
-    getKeyboardStrokeElement = (i) => {
-
+        let self = this;
         let input = document.createElement('span')
+        input.innerText = String.fromCharCode(65 + i)
 
         this.style(input, {
             border: '0.5px solid white',
@@ -212,11 +290,32 @@ class Hangman {
             width: '40px'
         }
         */
-        input.innerText = String.fromCharCode(65 + i)
+        input.addEventListener('click', function (element) {
+            console.log(element)
+            let selectedBlankBoxId = document.getElementById(`${self.data.selectedCharacterIndex}`);
+            let selectedCharacter = element.srcElement.innerText
+            self.validate(selectedBlankBoxId, selectedCharacter)
+        })
 
         return input
     }
 
+    validate(selectedBlankBoxId, selectedCharacter) {
+
+        let actualWord = this.data.selectedWord.word
+        let blankBoxId = selectedBlankBoxId.id
+
+        let isBoxContainCharacter = selectedBlankBoxId.innerText ? true : false
+        let isAlphabetMatchBlankBox = (actualWord[blankBoxId.split('_')[0]].toUpperCase() == selectedCharacter) ? true : false
+
+        if (!isBoxContainCharacter && isAlphabetMatchBlankBox) {
+            selectedBlankBoxId.innerText = selectedCharacter;
+            return true
+        } else {
+            this.data.failCount += 1;
+            return false
+        }
+    }
 
     generateAlphabetsKeyboard() {
 
@@ -229,7 +328,7 @@ class Hangman {
 
         let keyboard = Array.apply(null, new Array(26)).map(
             function (el, i) {
-                return self.getKeyboardStrokeElement(i)
+                return self.generateKeyboard(i)
             }
         )
 
@@ -238,6 +337,10 @@ class Hangman {
         });
 
         return inputParentTree
+
+    }
+
+    setAlphabet(character, positionInArray) {
 
     }
 
@@ -251,6 +354,9 @@ class Hangman {
 
     }
 
+    addDivAsParent(element, style) {
+
+    }
 
 }
 
