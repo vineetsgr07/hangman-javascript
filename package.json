@@ -1,0 +1,22 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "hangman for gre practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineetsgr07/hangman-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vineetsgr07/hangman-javascript/issues"
+  },
+  "homepage": "https://github.com/vineetsgr07/hangman-javascript#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
