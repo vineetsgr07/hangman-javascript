@@ -122,22 +122,22 @@ var wordList = [
     }
 ]
 
-import Store from "./store/store";
+// import Store from "./store/store";
 
-export default class Hangman {
+class Hangman {
 
-    constructor(props = {}) {
-        let self = this;
+    constructor() {
+    //     let self = this;
 
-        this.render = this.render || function () { };
+    //     this.render = this.render || function () { };
 
-        if (props.store instanceof Store) {
-            props.store.events.subscribe('stateChange', () => self.render());
-        }
+    //     if (props.store instanceof Store) {
+    //         props.store.events.subscribe('stateChange', () => self.render());
+    //     }
 
-        if (props.hasOwnProperty('element')) {
-            this.element = props.element;
-        }
+    //     if (props.hasOwnProperty('element')) {
+    //         this.element = props.element;
+    //     }
     }
 
     // Return random word and sentence
