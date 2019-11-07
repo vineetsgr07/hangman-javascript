@@ -180,7 +180,8 @@ class Hangman {
             justifyContent: 'center',
             alignItems: 'center',
             fontSize: '24px',
-            color: 'green'
+            color: 'green',
+            cursor: 'pointer'
         })
 
         blankBoxElement.addEventListener('click', function (element) {
