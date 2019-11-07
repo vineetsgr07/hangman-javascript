@@ -1,26 +1,60 @@
 <html>
 
 <style>
+    body {
+        background-color: #378A74;
+        top: 0;
+    }
+
+    .root {
+        margin-right: '16px';
+        display: flex;
+        align-items: center;
+    }
+
     #train {
         position: relative;
         cursor: pointer;
+    }
+
+    .blankBoxBg {
+        background-color: #378A74 !important;
+    }
+
+    .whiteBoxBg {
+        background-color: white !important;
+    }
+
+    #sentence-block {
+        border: '1px solid #EF7564' !important;
+        display: 'inline-block' !important;
+        width: 'max-content';
+        color: 'white';
+        background-color: 'purple';
+        font-weight: 'bold';
+        padding: '8px';
+        margin: '16px';
+    }
+
+    .hangman{
+        font-size: 48px;
+        color: white;
+        text-align: center;
     }
 </style>
 <!-- TODO: try to load it from a separate json -->
 <!-- <script type="text/javascript" src="wordList.json"></script> -->
 
-
 <body>
-    <canvas id="myCanvas" width="600" height="500" style="border:1px solid #c3c3c3;">
+    <div class="hangman"> HangMan </div>
+    <canvas id="myCanvas" width="600" height="300" style="display: fixed; top: 16px; background-color: white; ">
         Your browser does not support the canvas element.
     </canvas>
-    <div id="root"></div>
+    <div class="root" id="root"></div>
 </body>
 <script type="text/javascript" src="./hangman.js"> </script>
 <script>
     let hangman = new Hangman()
 </script>
-
-
 
 </html>
