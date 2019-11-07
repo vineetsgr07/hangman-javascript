@@ -1,113 +1,113 @@
 // Reference: https://github.com/scottfrazer/gre/blob/master/words.txt
 var wordList = [
-    {
-        "word": "abberant",
-        "sentence": "deviating from the norm"
-    },
-    {
-        "word": "abjure ",
-        "sentence": " to renounce or reject solemnly"
-    },
-    {
-        "word": "abrogate ",
-        "sentence": " to repeal; to revoke"
-    },
-    {
-        "word": "abstemonious ",
-        "sentence": " eating and drinking in moderation"
-    },
-    {
-        "word": "accolade ",
-        "sentence": " an expression of praise"
-    },
-    {
-        "word": "acerbic ",
-        "sentence": " having a sour or bitter taste. sharp and forthright"
-    },
-    {
-        "word": "acumen ",
-        "sentence": " quick, keen, or accurate knowledge or insight"
-    },
-    {
-        "word": "admonish ",
-        "sentence": " to reprove; to express warning or disapproval"
-    },
-    {
-        "word": "adroit ",
-        "sentence": " adept; dexterous"
-    },
-    {
-        "word": "adulation ",
-        "sentence": " excessive praise; intense adoration"
-    },
-    {
-        "word": "adulterate ",
-        "sentence": " to reduce purity by combining with inferior ingredients"
-    },
-    {
-        "word": "aesthetic ",
-        "sentence": " dealing with, appreciative of, or responsive to art or beauty"
-    },
-    {
-        "word": "aggrandize ",
-        "sentence": " to increase in intensity, power, or prestige"
-    },
-    {
-        "word": "alacrity ",
-        "sentence": " eager and enthusiastic willingness"
-    },
-    {
-        "word": "alchemy ",
-        "sentence": " a medieval science aimed to transmute metals into gold"
-    },
-    {
-        "word": "amalgamate",
-        "sentence": " to combine several elements into a whole"
-    },
-    {
-        "word": "amenable",
-        "sentence": " aggreable; responsive to suggestion"
-    },
-    {
-        "word": "anachronistic",
-        "sentence": " out of place in terms of historical or chronological context"
-    },
-    {
-        "word": "anathema",
-        "sentence": " a solemn or ecclesiastical (religious) curse; a cursed or thoroughly loathed person or thing"
-    },
-    {
-        "word": "anomaly",
-        "sentence": " deviation from the normal order, form, or rule; abnormality"
-    },
-    {
-        "word": "antipathy",
-        "sentence": " aversion; dislike"
-    },
-    {
-        "word": "antithetical",
-        "sentence": " diametrically opposed; as in antithesis"
-    },
-    {
-        "word": "apocryphal",
-        "sentence": " of dupious authenticity or origin; spurious"
-    },
-    {
-        "word": "apogee",
-        "sentence": " farthest or highest point; culmination; zenith"
-    },
-    {
-        "word": "apostate",
-        "sentence": " one who abandons log - held religious or political convictions"
-    },
-    {
-        "word": "apotheosis",
-        "sentence": " deification; supreme example"
-    },
-    {
-        "word": "apposite",
-        "sentence": " appropriate; pertinent; relevent; suitab"
-    }
+    { "word": "abberant", "sentence": "deviating from the norm" },
+    { "word": "abjure ", "sentence": " to renounce or reject solemnly" },
+    { "word": "abrogate ", "sentence": " to repeal; to revoke" },
+    { "word": "abstemonious ", "sentence": " eating and drinking in moderation" },
+    { "word": "accolade ", "sentence": " an expression of praise" },
+    { "word": "acerbic ", "sentence": " having a sour or bitter taste. sharp and forthright" },
+    { "word": "acumen ", "sentence": " quick, keen, or accurate knowledge or insight" },
+    { "word": "admonish ", "sentence": " to reprove; to express warning or disapproval" },
+    { "word": "adroit ", "sentence": " adept; dexterous" },
+    { "word": "adulation ", "sentence": " excessive praise; intense adoration" },
+    { "word": "adulterate ", "sentence": " to reduce purity by combining with inferior ingredients" },
+    { "word": "aesthetic ", "sentence": " dealing with, appreciative of, or responsive to art or beauty" },
+    { "word": "aggrandize ", "sentence": " to increase in intensity, power, or prestige" },
+    { "word": "alacrity ", "sentence": " eager and enthusiastic willingness" },
+    { "word": "alchemy ", "sentence": " a medieval science aimed to transmute metals into gold" },
+    { "word": "amalgamate", "sentence": " to combine several elements into a whole" },
+    { "word": "amenable", "sentence": " aggreable; responsive to suggestion" },
+    { "word": "anachronistic", "sentence": " out of place in terms of historical or chronological context" },
+    { "word": "anathema", "sentence": " a solemn or ecclesiastical (religious) curse; a cursed or thoroughly loathed person or thing" },
+    { "word": "anomaly", "sentence": " deviation from the normal order, form, or rule; abnormality" },
+    { "word": "antipathy", "sentence": " aversion; dislike" },
+    { "word": "antithetical", "sentence": " diametrically opposed; as in antithesis" },
+    { "word": "apocryphal", "sentence": " of dupious authenticity or origin; spurious" },
+    { "word": "apogee", "sentence": " farthest or highest point; culmination; zenith" },
+    { "word": "apostate", "sentence": " one who abandons log - held religious or political convictions" },
+    { "word": "apotheosis", "sentence": "deification; supreme example" },
+    { "word": "apposite", "sentence": " appropriate; pertinent; relevent; suitab" },
+    { "word": "apprise", "sentence": "to give notice to; to inform; notify" },
+    { "word": "approbation", "sentence": "an expression of approval or praise" },
+    { "word": "arcane", "sentence": "mysterious; esoteric" },
+    { "word": "arabesque", "sentence": "a complex, ornate design; also a dance position" },
+    { "word": "archaic", "sentence": "outdated; associated with an earlier perhaps more primitive time" },
+    { "word": "artless", "sentence": "completely without guile; unsophisticated" },
+    { "word": "ascetic", "sentence": "someone practicing self-denial" },
+    { "word": "aspersion", "sentence": "an act of defamation or maligning; slander" },
+    { "word": "assay", "sentence": "to put to a test" },
+    { "word": "assiduous", "sentence": "diligent; hard-working" },
+    { "word": "assuage", "sentence": "to ease or lessen; to appease or pacify" },
+    { "word": "astringent", "sentence": "biting; severe" },
+    { "word": "atrophy", "sentence": "to waste away or deteriorate" },
+    { "word": "attenuate", "sentence": "to weaken or make thinner" },
+    { "word": "audacious", "sentence": "daring and fearless; recklessly bold" },
+    { "word": "augury", "sentence": "omen; potent; indication" },
+    { "word": "auspices", "sentence": "protection or support" },
+    { "word": "auspicious", "sentence": "favorable" },
+    { "word": "avarice", "sentence": "greed, especially for wealth" },
+    { "word": "aver", "sentence": "to state as fact; to confirm or support" },
+    { "word": "baleful", "sentence": "sinister; ominous" },
+    { "word": "beatify", "sentence": "to bless, make happy, or ascribe a virtue to" },
+    { "word": "behemoth", "sentence": "something enormous; a gigantic creature" },
+    { "word": "beleaguer", "sentence": "to beset; to beseige" },
+    { "word": "belie", "sentence": "to give a false impression of" },
+    { "word": "bellicose", "sentence": "belligerant; warlike" },
+    { "word": "boisterous", "sentence": "loud; noisy; lacking restraint" },
+    { "word": "bolster", "sentence": "to provide support" },
+    { "word": "bombast", "sentence": "self-important or pompous writing or speech" },
+    { "word": "boor", "sentence": "a rude or insensitive person" },
+    { "word": "burgeon", "sentence": "to grow rapidly or flourish" },
+    { "word": "burnish", "sentence": "to make smooth; to rub to a shine" },
+    { "word": "byzantine", "sentence": "labyrinthine; complex" },
+    { "word": "cabal", "sentence": "a scheme or plot; a group of plotters" },
+    { "word": "cachinnate", "sentence": "to laugh loudly" },
+    { "word": "cacophony", "sentence": "harsh, jarring, discordant sound; dissonance" },
+    { "word": "cajole", "sentence": "to inveigle; to coax through flattery" },
+    { "word": "calumny", "sentence": "slander" },
+    { "word": "calumniate", "sentence": "to slander" },
+    { "word": "canon", "sentence": "an established set of principles or code of laws, often religious in nature" },
+    { "word": "capricious", "sentence": "inclined to change one's mind impulsively or unpredictably" },
+    { "word": "captious", "sentence": "calculated to confuse or entrap in argument" },
+    { "word": "castigate", "sentence": "to severely criticize or punish" },
+    { "word": "catalyst", "sentence": "a substance that accelerates the rate of a chemical reaction without changing; a person who causes change" },
+    { "word": "caustic", "sentence": "burning or stinging, causing corrosion" },
+    { "word": "celerity", "sentence": "speed" },
+    { "word": "censure", "sentence": "to criticize severly; to officially rebuke" },
+    { "word": "chary", "sentence": "wary; cautious, sparing" },
+    { "word": "chasten", "sentence": "to restrain or correct" },
+    { "word": "chauvinist", "sentence": "a blindly devoted patriot" },
+    { "word": "chicanery", "sentence": "trickery or subterfuge" },
+    { "word": "chimera", "sentence": "an illusion; originally, an imaginary fire-breathing monster" },
+    { "word": "churlish", "sentence": "vulgar; difficult and intractable" },
+    { "word": "coalesce", "sentence": "to come together or unite" },
+    { "word": "coda", "sentence": "a concluding section of a musical or literary piece" },
+    { "word": "cogent", "sentence": "appealing forcibly to the mind or reason; convincing" },
+    { "word": "commensurate", "sentence": "matching; corresponding in degree, size, or amount" },
+    { "word": "complaisance", "sentence": "complaisance", "sentence": "the willingness to comply with the wishes of others" },
+    { "word": "connoisseur", "sentence": "an informed and astute judge in matters of taste; expert" },
+    { "word": "contiguous", "sentence": "sharing a border; touching; adjacent" },
+    { "word": "contrite", "sentence": "regretful, penitent; seeking forgiveness" },
+    { "word": "convention", "sentence": "a generally agreed-upon practice or attitude" },
+    { "word": "corrigible", "sentence": "capable of being set right; correctable" },
+    { "word": "cosset", "sentence": "to coddle" },
+    { "word": "countenance", "sentence": "to approve of or tolerate" },
+    { "word": "cozen", "sentence": "to deceive, beguile, or hoodwink" },
+    { "word": "craven", "sentence": "contemptibly fainthearted; lacking any courage" },
+    { "word": "credulous", "sentence": "tending to believe too readily" },
+    { "word": "crestfallen", "sentence": "dejected; disappointed" },
+    { "word": "curmudgeon", "sentence": "an irritable, ill-tempered person" },
+    { "word": "cursory", "sentence": "hasty; done with little attention" },
+    { "word": "cynicism", "sentence": "an attitude or quality of belief that all people are motivated by selfishness" }
+
+
+
+
+
+
+
+
+
 ]
 
 class Hangman {
@@ -415,7 +415,7 @@ class Hangman {
 
         if (step <= 10) {
             let element = document.getElementById('score_id')
-            element && (element.innerText = `${10-step} lives`)
+            element && (element.innerText = `${10 - step} lives`)
         }
 
         if (step >= 10) {
@@ -425,7 +425,7 @@ class Hangman {
             ctx.font = "40px Arial";
             ctx.fillText(`Game Over`, 180, 140);
             ctx.font = "20px Arial";
-            ctx.fillText(`${this.data.randomWord.word} is the word.`,180, 190);
+            ctx.fillText(`${this.data.randomWord.word} is the word.`, 180, 190);
 
             if (step === 10) {
                 let gameOverBtn = this.restartButton()

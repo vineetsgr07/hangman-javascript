@@ -18,7 +18,7 @@
     }
 
     .blankBoxBg {
-        background-color: #378A74 !important;
+        background-color: #FDBF6B !important;
     }
 
     .whiteBoxBg {
@@ -36,17 +36,38 @@
         margin: '16px';
     }
 
-    .hangman{
+    .title {
         font-size: 48px;
         color: white;
         text-align: center;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: white;
+        text-align: center;
+
+    }
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 <!-- TODO: try to load it from a separate json -->
 <!-- <script type="text/javascript" src="wordList.json"></script> -->
 
 <body>
-    <div class="hangman"> HangMan </div>
+    <div class="heading">
+        <div class="title"> HangMan
+        </div>
+        <div class="subtitle">
+            <div>Vocabulary</div>
+            <div>Builder</div>
+        </div>
+    </div>
+
     <canvas id="myCanvas" width="600" height="300" style="display: fixed; top: 16px; background-color: white; ">
         Your browser does not support the canvas element.
     </canvas>
